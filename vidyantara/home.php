@@ -30,11 +30,12 @@ corporate success.',
 	],
 ];
 
-echo '<div class="container content-box">';
+echo '<div class="container content-box mt-4">';
 foreach ($items as $vars) {
-	$tpl = getThemeSection('home', $vars['template'], SITEPATH . '/themes/');
+	$tpl = getThemeSection('vidyantara', $vars['template'], SITEPATH . '/themes/');
 	echo replaceItems($tpl, $vars, '%');
 	echo cbCloseAndOpen('container');
 }
 echo getSnippet('contact', CORESNIPPET);
 echo '</div>';
+echo getSnippet(nodeValue());
