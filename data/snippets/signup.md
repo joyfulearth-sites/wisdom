@@ -1,4 +1,5 @@
 <!--engage-->
+%engage-note-above%
 
 ## Basic Details
 
@@ -24,8 +25,10 @@
 
 ## Course Preference
 
-* Offfline / Online
+* Offline / Online
 * Self Paced
 * July Batch 
 * August Batch
 * September Batch
+
+%engage-note%

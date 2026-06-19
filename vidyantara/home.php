@@ -27,15 +27,16 @@ regulation, and find peace amidst professional pressure.',
 		'item2' => '<b>15,000+ Professionals</b> Impacted and Empowered Internationally.',
 		'item3' => '<b>Master Educator &amp; Relationship Expert</b> specializing in aligning personal purpose with
 corporate success.',
+		'image' => replaceHtml('%cdn%vidya.png'),
 	],
 ];
 
-echo '<div class="container content-box mt-4">';
-foreach ($items as $vars) {
+echo '<div class="container content-box mt-4 translucent-' . $items[0]['template'] . ' translucent">';
+foreach ($items as $ix => $vars) {
 	$tpl = getThemeSection('vidyantara', $vars['template'], SITEPATH . '/themes/');
 	echo replaceItems($tpl, $vars, '%');
-	echo cbCloseAndOpen('container');
+	$css = $ix < count($items) - 1 ? $items[$ix + 1]['template']  . ' translucent' : 'none';
+	echo cbCloseAndOpen('container translucent-' . $css);
 }
-echo getSnippet('contact', CORESNIPPET);
 echo '</div>';
 echo getSnippet(nodeValue());
