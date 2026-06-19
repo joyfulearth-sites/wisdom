@@ -22,6 +22,9 @@
 .btn-danger { --bs-btn-bg: #e7b8b8; }
 .btn-has-icon { letter-spacing: 1px; color: #fff; }
 #footer .btn-has-icon, .slider-links a, #footer-social a { color: #000!important; font-weight: bold; }
+.footer-widgets-wrap > hr { display: none; }
+
+.quote { font-size: 130%; color: #400D0D; font-weight: bold; }
 
 .content-box.translucent {
   position: relative; /* Establishes a positioning context for the pseudo-element */
