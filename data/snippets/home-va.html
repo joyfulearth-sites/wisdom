@@ -1,0 +1,244 @@
+<!--no-replaces-->
+<div class="vidyantara-slider-section content-box container">
+  <div class="slider-tabs">
+    <button class="tab-btn active" onclick="switchSlide(0)">WHAT IS IT?</button>
+    <button class="tab-btn" onclick="switchSlide(1)">WHY DO YOU NEED IT?</button>
+    <button class="tab-btn" onclick="switchSlide(2)">HOW DOES IT WORK?</button>
+  </div>
+
+  <div class="slider-container">
+    <div class="vidyantara-slide active">
+      <p>VidyAntara Basics is a premium, rigorous in-person awareness framework specifically built to address the psychological and behavioral realities of modern young professionals. Far from a generic motivational seminar or corporate compliance presentation, this experience serves as a dedicated cognitive sanctuary. It is designed to strip away external noise, confront internal cognitive blind spots, and re-establish a grounded baseline of radical self-honesty.</p>
+      <p>At its core, the architecture focuses on breaking the deeply ingrained patterns of "autopilot living." It provides participants with highly structured, offline processing mechanisms to map their mental energy leaks, evaluate their current state of well-being, and transition from passive bystanders to active architects of their own trajectory. The curriculum balances psychological depth with highly practical frameworks tailored for early-to-mid career transitions.</p>
+      <p>The program is completely research-driven, continuously engineered by our dedicated Course Research Assistant and delivered live by our foundational Program Facilitator to preserve maximum instructional integrity. It culminates in a somatic mind-body alignment experience, leaving participants with an optimized physiological foundation and an uncompromised sense of personal sovereignty ready to face highly competitive professional landscapes.</p>
+    </div>
+
+    <div class="vidyantara-slide">
+      <p>In today's hyper-connected corporate world, young working professionals are quietly enduring a severe epidemic of digital fatigue, mental stagnation, and overthinking. Standard corporate wellness tools frequently offer superficial, reactive coping mechanisms—such as brief meditation apps or generic webinars—rather than dismantling the structural habits that cause burnout in the first place. This gap leaves talent feeling chronically overwhelmed and disconnected.</p>
+      <p>Without an intentional internal framework, high-stakes environments inevitably breed invisible presenteeism and sudden professional paralysis. Young talent loses their creative agency, misinterprets constant digital busyness for real productivity, and succumbs to the social algorithms that dictate modern lifestyle choices. There is an urgent, systemic need for an uncompromised personal safeguard that operates completely independent of external surveillance.</p>
+      <p>By investing in this foundational shift, participants and organizations actively mitigate the steep costs of early-career attrition and somatic sick leaves. Reclaiming cognitive sovereignty directly translates into heightened focus hours, constructive workplace communication, and long-term career resilience. It replaces toxic, passive venting with solution-oriented clarity, making it an essential talent investment.</p>
+    </div>
+
+    <div class="vidyantara-slide">
+      <p>The transformation is executed live through three foundational pillars: Setting the Baseline, Engineering Sovereignty, and optimizing the Integrated Organism. Participants begin by utilizing our custom Wheel of Life Baseline Assessment to diagnose personal blind spots, immediately followed by the implementation of our Tri-Tier Privacy Protocol, which cleanly organizes critical life data into distinct Private, Shared, and Public boundaries.</p>
+      <p>Rather than relying on passive listening, the workshop operates as an interactive classroom laboratory. The delivery model deploys high-impact, non-superficial icebreakers to establish immediate psychological safety, followed by guided free-writing labs that actively unmask internal blocks. Small structural breakout circles utilize Nonviolent Communication (NVC) vocabulary to train participants to translate friction into actionable universal needs.</p>
+      <p>The in-person intensive concludes with the powerful VidyAntara Peace Benediction, a structured deep-breathing sequence that resets the mind-body axis. This experience launches a structured 12-week post-workshop integration roadmap. Using their physical, custom-crafted Lifelong Learning Journals, cohorts utilize daily and weekly accountability audits to permanently turn these newly engineered behaviors into automated, sovereign habits.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function switchSlide(slideIndex) {
+    // Get all slides and buttons
+    const slides = document.querySelectorAll('.vidyantara-slide');
+    const buttons = document.querySelectorAll('.tab-btn');
+    
+    // Remove active class from all
+    slides.forEach(slide => slide.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to selected
+    slides[slideIndex].classList.add('active');
+    buttons[slideIndex].classList.add('active');
+  }
+</script>
+
+<style>
+  .vidyantara-slider-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-sizing: border-box;
+  }
+
+  .slider-tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 15px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    text-align: center;
+  }
+
+  .tab-btn:hover {
+    color: #0f172a;
+  }
+
+  .tab-btn.active {
+    color: #cb9b55; /* VidyAntara signature premium gold accent */
+    border-bottom: 3px solid #cb9b55;
+  }
+
+  .slider-container {
+    position: relative;
+    min-height: 350px;
+    background: #ffffff;
+    border-radius: 8px;
+  }
+
+  .vidyantara-slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .vidyantara-slide.active {
+    display: block;
+  }
+
+  .vidyantara-slide p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 20px;
+  }
+
+  .vidyantara-slide p:last-child {
+    margin-bottom: 0;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive styling for smaller screens */
+  @media (max-width: 600px) {
+    .slider-tabs {
+      flex-direction: column;
+      border-bottom: none;
+    }
+    .tab-btn {
+      border-bottom: 2px solid #e2e8f0;
+      padding: 12px;
+    }
+    .tab-btn.active {
+      border-bottom: 2px solid #cb9b55;
+    }
+  }
+</style>
+
+<div class="vidyantara-poster-container">
+  <div class="vidyantara-poster-card">
+    <span class="poster-kicker">%siteName%</span>
+    <span class="poster-tag">%byline%</span>
+    
+    <h2 class="poster-title">VIDYANTARA BASICS</h2>
+    <p class="poster-hook">Break the Autopilot. Reclaim Your Focus.</p>
+    
+    <p class="poster-description">
+      An intensive, in-person awareness framework built for young professionals to engineer personal sovereignty and lasting mental clarity.
+    </p>
+    
+    <a href="%url%vidyantara/" class="poster-cta-btn">KNOW MORE</a>
+  </div>
+</div>
+
+<style>
+  .vidyantara-poster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+  }
+  
+  .vidyantara-poster-card {
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Deep, sophisticated dark slate slate gradient */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .poster-kicker {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #e2e8f0;
+    margin-bottom: 4px;
+  }
+
+  .poster-tag {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #cb9b55; /* Premium muted gold tone */
+    margin-bottom: 40px;
+  }
+  
+  .poster-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+  }
+  
+  .poster-hook {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #f1f5f9;
+    margin: 0 0 24px 0;
+  }
+  
+  .poster-description {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #94a3b8;
+    max-width: 440px;
+    margin: 0 0 45px 0;
+  }
+  
+  .poster-cta-btn {
+    display: block;
+	margin-top: 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #0f172a;
+    background-color: #ffffff;
+    padding: 14px 36px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+  }
+  
+  .poster-cta-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+</style>
