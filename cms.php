@@ -3,9 +3,6 @@ variables([
 	'no-site-widgets' => true,
 	VAREmail => 'vidya+wisdom@awakentolife.org',
 	VARDAWNMenu => 'no',
-	'htmlReplaces' => [
-		'ModuleIntroduction' => 'Please visit the points below and use the toolbox below to either send yourself whatsapp or emails. Email is best as it would help you consolidate your course findings. Write to us (as a paid service) or book 1-1 time with us.',
-	],
 	'siteRawReplaces' => [
 		'$\to$' => ' &rarr; ',
 	],
@@ -14,6 +11,11 @@ variables([
 addStyle('styles');
 
 function site_before_render() {
+	variable('htmlReplaces', [
+			'ModuleIntroduction' => getSnippet('module-top'),
+		],
+	);
+
 	$settings = [
 		VARDontOverwriteLogo => true,
 		VARUseNodeIcons => true,
@@ -41,6 +43,11 @@ function site_before_render() {
 }
 
 function before_file() {
-	if (getPageParameterAt() == 'learn')
+	if (getPageParameterAt() == 'learn' && !getQueryparameter('content'))
 		echo getCodeSnippet(concatStrings('-', nodeValue(), getPageParameterAt(), 'overview'));
+}
+
+function enrichEngageNote($content, $where) {
+	if (!getPageParameterAt() == 'learn') return $content;
+	return replaceItems(getSnippet($where == VAREngageNoteAbove ? 'module-top' : 'append-to-engage'), ['original-note' => $content], WRAPREPLACE);
 }
